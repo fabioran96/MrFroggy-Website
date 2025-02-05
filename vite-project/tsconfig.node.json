@@ -4,22 +4,21 @@
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
-    "moduleResolution": "node",
     "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": false, // Permetti a TypeScript di generare file compilati
+    "noEmit": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    /* Aggiunto */
-    "typeRoots": ["./node_modules/@types", "./types"]
+    "noUncheckedSideEffectImports": true
   },
-  "include": ["vite.config.ts", "src/**/*"]
+  "include": ["vite.config.ts"]
 }
