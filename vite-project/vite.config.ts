@@ -2,13 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
   base: "./", // Imposta la base relativa per il deploy su Vercel
   build: {
     outDir: "dist", // Assicura che la build venga salvata nella cartella giusta
     rollupOptions: {
-      external: ["bootstrap/dist/css/bootstrap.min.css"], // Evita di cercare il CSS durante il bundle
+      external: mode === "production" ? ["bootstrap/dist/css/bootstrap.min.css"] : [], // Evita di cercare il CSS durante il bundle
     },
   },
   server: {
@@ -20,4 +20,4 @@ export default defineConfig({
       "@": "/src", // Shortcut per importazioni dalla cartella src
     },
   },
-})
+}))
