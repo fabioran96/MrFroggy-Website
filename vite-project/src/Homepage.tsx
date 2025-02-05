@@ -21,7 +21,7 @@ const Homepage = () => {
             Mr Froggy
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
+          <Navbar.Collapse id="navbarScroll" as="div" role="navigation">
             <Nav className="ml-auto my-2 my-lg-0" navbarScroll>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">Chi sono</Nav.Link>

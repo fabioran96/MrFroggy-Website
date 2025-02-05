@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", /* Cambiato da "bundler" a "node" */
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -19,7 +19,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Configurazione aggiuntiva per i tipi */
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["react", "react-dom", "react-bootstrap"]
   },
   "include": ["src"]
 }
