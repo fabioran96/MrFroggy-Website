@@ -1,0 +1,30 @@
+
+.navbar-logo {
+    width: 40px; 
+    height: auto;
+  }
+
+
+  
+  
+/* Elemento SVG */
+.homepage-element {
+    width: 100%; /* Adatta l'SVG alla larghezza dello schermo */
+    max-width: 1600px; /* Limite massimo per schermi più grandi */
+    height: auto;
+}
+
+.homepage-container {
+    padding: 0;
+}
+
+.about {
+    justify-content: center;
+    display: flex;
+}
+
+.about-svg {
+    width: 40%;
+    height: 40%;
+}
+
