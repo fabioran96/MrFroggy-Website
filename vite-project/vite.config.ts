@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
   build: {
-    outDir: "dist", // Assicura che la build venga salvata nella cartella giusta
+    outDir: "dist", 
+    cssCodeSplit: true,// Assicura che la build venga salvata nella cartella giusta
     rollupOptions: {
       external: mode === "production" ? ["bootstrap/dist/css/bootstrap.min.css"] : [], // Evita di cercare il CSS durante il bundle
     },
